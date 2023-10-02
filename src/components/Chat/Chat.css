@@ -1,0 +1,22 @@
+
+
+.chatContainer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.chatBox
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    flex: 1;
+    border: 1px solid black;
+    min-width: 10vw;
+    min-height: 30vh;
+}

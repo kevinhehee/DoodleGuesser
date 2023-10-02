@@ -48,7 +48,11 @@ const DrawingPage = () => {
             );
         }
         const ctx = canvas.getContext("2d");
-        
+        const handleMouseUp = () => 
+        {
+            isDrawing = false;
+            lastDrawnPoint = null;
+        }
         let lastDrawnPoint = null;
 
         const draw = (event) => {
@@ -68,7 +72,6 @@ const DrawingPage = () => {
             
         }
         
-        
 
         canvas.addEventListener("mousedown", handleMouseDown);
         canvas.addEventListener("mousemove", draw);
@@ -86,11 +89,7 @@ const DrawingPage = () => {
             }
         });
 
-        const handleMouseUp = () => 
-        {
-            isDrawing = false;
-            lastDrawnPoint = null;
-        }
+        
         return () => {
             canvas.removeEventListener("mousedown", handleMouseDown);
             canvas.removeEventListener("mousemove", draw);

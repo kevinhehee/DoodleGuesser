@@ -43,6 +43,11 @@ io.on('connection', (socket) => {
     socket.broadcast.emit('drawing_line', data);
   });
 
+  socket.on('send_message', (message) => {
+    // console.log(message);
+    socket.broadcast.emit('receive_message', message);
+  })
+
 
 });
 

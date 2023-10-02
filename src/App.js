@@ -1,10 +1,14 @@
 import './App.css';
-import DrawingPage from "./components/DrawingPage/DrawingPage"
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import DrawingPage from "./components/DrawingPage/DrawingPage";
+import Chat from "./components/Chat/Chat";
+import Room from "./pages/Room/Room";
 
 function App() {
   return (
     <div className="App">
-      <DrawingPage/>
+      <Room/>
       
 
     </div>
